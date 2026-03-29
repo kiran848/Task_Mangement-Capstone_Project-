@@ -19,7 +19,7 @@ public class Task {
     private String title;
     private String description;
 
-    private String status; // TODO, IN_PROGRESS, DONE
+    private String status; // 
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "assigned_to")
