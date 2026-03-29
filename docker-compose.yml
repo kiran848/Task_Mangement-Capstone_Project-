@@ -1,0 +1,27 @@
+services:
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: Root@1234
+      MYSQL_DATABASE: taskdb
+    ports:
+      - "3307:3306"
+
+  backend:
+    build: ./Task_Management
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/taskdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      - db
+
+  frontend:
+    build: ./task-frontened
+    ports:
+      - "3000:3000"
+      
+    depends_on:
+      - backend
