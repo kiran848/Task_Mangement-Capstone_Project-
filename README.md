@@ -149,11 +149,72 @@ This project is designed to demonstrate:
 ## ▶️ Run Locally
 
 ### 🔹 Backend
-cd Task_Management
-mvnw.cmd spring-boot:run
+`cd Task_Management`
+`mvnw.cmd spring-boot:run`
 
-Runs at: http://localhost:8080
+Runs at: `http://localhost:8080`
 
 ---
 
 ### 🔹 Frontend
+`cd task-frontened`  
+`npm install` 
+`npm start`  
+
+Runs at: `http://localhost:3000`  
+
+---
+
+## 🐳 Run with Docker
+
+### 🔹 Step 1: Build Backend
+`cd Task_Management`  
+`mvnw.cmd -DskipTests package`  
+`cd ..`  
+
+---
+
+### 🔹 Step 2: Start Application
+`docker-compose up --build`  
+
+---
+
+### 🌐 Services
+- Frontend → `http://localhost:3000`  
+- Backend → `http://localhost:8080`  
+
+---
+
+## ⚙️ CI/CD Pipeline
+
+GitHub Actions workflow is configured to:
+- Build backend using Maven  
+- Build frontend using Node  
+- Build Docker images  
+
+---
+
+## 📁 Project Structure
+
+Capstone_Project/  
+├── Task_Management/   # Backend (Spring Boot)  
+├── task-frontened/   # Frontend (React)  
+├── docker-compose.yml  
+└── .github/workflows/   # CI/CD  
+
+---
+
+## 🎯 Key Highlights
+
+- Role-based task management system  
+- Secure JWT authentication  
+- Clean UI with proper UX  
+- Fully Dockerized application  
+- CI/CD pipeline integration  
+- RESTful API design  
+
+---
+
+## 👨‍💻 Author
+
+Kiran
