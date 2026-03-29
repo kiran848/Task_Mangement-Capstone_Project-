@@ -34,7 +34,7 @@ jobs:
           npm install
           npm run build
 
-      # Docker build test
+      
       - name: Build Docker Images
         run: |
           docker build -t backend ./backend
