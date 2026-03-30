@@ -19,7 +19,7 @@ jobs:
           java-version: "17"
 
       - name: Build Backend
-        working-directory: backend
+        working-directory: Task_Management
         run: mvn clean install
 
       # Node setup
@@ -29,13 +29,12 @@ jobs:
           node-version: "20"
 
       - name: Build Frontend
-        working-directory: frontend
+        working-directory: task-frontened
         run: |
           npm install
           npm run build
 
-      
       - name: Build Docker Images
         run: |
-          docker build -t backend ./backend
-          docker build -t frontend ./frontend
+          docker build -t backend ./Task_Management
+          docker build -t frontend ./task-frontened
