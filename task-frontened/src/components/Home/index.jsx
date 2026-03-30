@@ -1,5 +1,4 @@
-import React from "react";
-import PublicNavbar from "../Navbar/PublicNavbar";
+
 
 export default function Home() {
   return (
