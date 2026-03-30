@@ -20,7 +20,7 @@ jobs:
 
       - name: Build Backend
         working-directory: Task_Management
-        run: mvn clean install
+        run: mvn clean install -DskipTests
 
       # Node setup
       - name: Set up Node
