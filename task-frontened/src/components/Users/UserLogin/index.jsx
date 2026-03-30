@@ -15,12 +15,12 @@ export default function UserDashboard() {
     status: "TODO",
   });
 
-  // ✅ NEW STATES
+  //  NEW STATES
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // ✅ AUTO HIDE
+  //  AUTO HIDE
   useEffect(() => {
     if (error || success) {
       const timer = setTimeout(() => {
@@ -32,7 +32,7 @@ export default function UserDashboard() {
     }
   }, [error, success]);
 
-  // 🔥 Fetch tasks
+  //  Fetch tasks
   const fetchTasks = async () => {
     try {
       setLoading(true);
@@ -49,7 +49,7 @@ export default function UserDashboard() {
     fetchTasks();
   }, []);
 
-  // 🔥 Create task
+  //  Create task
   const handleCreate = async () => {
     setError("");
     setSuccess("");
@@ -80,7 +80,7 @@ export default function UserDashboard() {
     }
   };
 
-  // 🔥 Update status
+  //  Update status
   const handleStatusChange = async (id, status) => {
     try {
       setLoading(true);
@@ -97,7 +97,7 @@ export default function UserDashboard() {
     }
   };
 
-  // 🔥 Filter
+  //  Filter
   const filteredTasks = filter
     ? tasks.filter((t) => t.status === filter)
     : tasks;
@@ -106,11 +106,11 @@ export default function UserDashboard() {
     <div className="container mt-4">
       <h2>User Dashboard 👤</h2>
 
-      {/* ✅ ERROR / SUCCESS */}
+     
       {error && <div className="alert alert-danger">{error}</div>}
       {success && <div className="alert alert-success">{success}</div>}
 
-      {/* 🔥 CREATE TASK */}
+     
       <div className="card p-3 mb-4">
         <h5>Create Task</h5>
 
@@ -153,7 +153,7 @@ export default function UserDashboard() {
         </button>
       </div>
 
-      {/* 🔥 FILTER */}
+      
       <div className="mb-3">
         <select
           className="form-control"
@@ -167,7 +167,7 @@ export default function UserDashboard() {
         </select>
       </div>
 
-      {/* 🔥 TASK TABLE */}
+      
       <table className="table">
         <thead>
           <tr>

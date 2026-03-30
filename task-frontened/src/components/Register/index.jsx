@@ -16,7 +16,7 @@ export default function Register() {
 
   const navigate = useNavigate();
 
-  // ✅ AUTO HIDE
+  //  AUTO HIDE
   useEffect(() => {
     if (error || success) {
       const timer = setTimeout(() => {
@@ -44,7 +44,7 @@ export default function Register() {
 
       setSuccess("Registered Successfully ✅");
 
-      // delay for better UX
+     
       setTimeout(() => {
         navigate("/login");
       }, 800);
@@ -61,7 +61,7 @@ export default function Register() {
       <div className="login-card">
         <h3 className="text-center mb-4">Register</h3>
 
-        {/* ✅ ERROR / SUCCESS */}
+       
         {error && <div className="alert alert-danger">{error}</div>}
         {success && <div className="alert alert-success">{success}</div>}
 

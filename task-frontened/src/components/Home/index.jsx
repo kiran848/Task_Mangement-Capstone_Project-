@@ -28,7 +28,7 @@ export default function Home() {
       
       </div>
 
-      {/* FEATURES SECTION */}
+     
       <div className="container text-center mt-5">
         <div className="row">
           <div className="col-md-3">

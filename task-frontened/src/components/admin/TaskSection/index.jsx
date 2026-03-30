@@ -8,12 +8,12 @@ export default function TaskSection() {
     const [userId, setUserId] = useState("");
     const [users, setUsers] = useState([]);
 
-    // ✅ NEW STATES
+    // NEW STATES
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // ✅ AUTO HIDE MESSAGE
+    // AUTO HIDE MESSAGE
     useEffect(() => {
         if (error || success) {
             const timer = setTimeout(() => {
@@ -82,7 +82,7 @@ export default function TaskSection() {
         <div className="card p-3">
             <h5>Task Management</h5>
 
-            {/* ✅ ERROR / SUCCESS */}
+           
             {error && <div className="alert alert-danger">{error}</div>}
             {success && <div className="alert alert-success">{success}</div>}
 

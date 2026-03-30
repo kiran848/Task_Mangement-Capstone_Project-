@@ -14,7 +14,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  // ✅ AUTO HIDE
+  
   useEffect(() => {
     if (error || success) {
       const timer = setTimeout(() => {
@@ -45,7 +45,7 @@ export default function Login() {
 
       setSuccess("Login Successful ✅");
 
-      // slight delay for UX
+      
       setTimeout(() => {
         if (res.data.role === "ADMIN") {
           navigate("/admin");
@@ -66,7 +66,7 @@ export default function Login() {
       <div className="login-card">
         <h3 className="text-center mb-4">Login</h3>
 
-        {/* ✅ ERROR / SUCCESS */}
+        
         {error && <div className="alert alert-danger">{error}</div>}
         {success && <div className="alert alert-success">{success}</div>}
 

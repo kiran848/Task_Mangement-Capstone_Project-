@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar navbar-dark bg-dark px-3">
-      <h4 className="text-white">Dashboard</h4>
+      <h4 className="text-white">Task Manager </h4>
       <button className="btn btn-danger" onClick={logout}>
         Logout
       </button>

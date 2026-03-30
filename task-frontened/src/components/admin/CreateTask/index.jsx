@@ -12,7 +12,7 @@ export default function CreateTask({ refresh }) {
     assignedTo: { id: "" },
   });
 
-  // ✅ NEW STATES
+  // NEW STATES
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
@@ -29,7 +29,7 @@ export default function CreateTask({ refresh }) {
 }, [error, success]);
 
 
-  // 🔥 Load users for dropdown
+  // Load users for dropdown
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -62,7 +62,7 @@ export default function CreateTask({ refresh }) {
 
       setSuccess("Task Created Successfully ✅");
 
-      // 🔥 reset form
+      //  reset form
       setTask({
         title: "",
         description: "",
@@ -84,11 +84,11 @@ export default function CreateTask({ refresh }) {
     <div className="card p-3 mb-4">
       <h5>Create Task</h5>
 
-      {/* 🔥 ERROR / SUCCESS UI */}
+      
       {error && <div className="alert alert-danger">{error}</div>}
       {success && <div className="alert alert-success">{success}</div>}
 
-      {/* TITLE */}
+   
       <input
         className="form-control my-2"
         placeholder="Title"
@@ -98,7 +98,7 @@ export default function CreateTask({ refresh }) {
         }
       />
 
-      {/* DESCRIPTION */}
+     
       <input
         className="form-control my-2"
         placeholder="Description"
@@ -108,7 +108,7 @@ export default function CreateTask({ refresh }) {
         }
       />
 
-      {/* STATUS */}
+    
       <select
         className="form-control my-2"
         value={task.status}
@@ -121,7 +121,7 @@ export default function CreateTask({ refresh }) {
         <option value="DONE">DONE</option>
       </select>
 
-      {/* USER DROPDOWN */}
+     
       <select
         className="form-control my-2"
         value={task.assignedTo.id}
@@ -140,7 +140,7 @@ export default function CreateTask({ refresh }) {
         ))}
       </select>
 
-      {/* BUTTON */}
+      
       <button
         className="btn btn-danger mt-2"
         onClick={handleSubmit}
