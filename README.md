@@ -192,6 +192,7 @@ GitHub Actions workflow is configured to:
 - Build frontend using Node  
 - Build Docker images  
 
+[![CI](https://github.com/kiran848/Task_Mangement-Capstone_Project-/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kiran848/Task_Mangement-Capstone_Project-/actions/workflows/ci.yml)
 ---
 
 ## 📁 Project Structure
